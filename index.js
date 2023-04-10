@@ -1,57 +1,64 @@
 
-// ** pâmetro posicional **
+// function soma(a, b) {
+//     console.log(a + b);
 
-// function calculador(valorX, valorY) {
-//     console.log(valorX + valorY);
 // }
 
-// calculador(5, 10)
+// const resultado = soma(5, 10);
 
+// console.log(resultado);
 
-
-// ** parâmetros com valor default **
-// function calculador(valorX, valorX) {
-//     console.log(valorX, valorX);
-//     console.log(valorX + valorX);
+// ** Retornando um valor simples: **
+// function soma(a, b) {
+//     console.log(a + b);
+//     return a + b;
 // }
 
-// calculador(5, 7)
+// const resultado = soma(5, 10);
+
+// console.log(resultado);
 
 
 
-// ** atribuição por desestruturação **
+// ** Retornando um arrays **
 
-// const { nome, idade } = {
-//     nome: 'ariel',
-//     idade: 25,
+// function criarPessoa(nome, idade) {
+//     return [nome, idade]
 // }
+
+// const [nome, idade] = criarPessoa('Ariel', 29);
+
 // console.log(nome, idade);
-// const [nome,] = ["Ariel", 29];
 
-// function printUser({ nome, idade }) {
-//     console.log(nome, idade);
+
+
+// ** Retornando um objeto **
+
+
+// function criarPessoa(nome, idade) {
+//     return {
+//         nome,
+//         idade
+//     }
 // }
 
-// printUser({
-//     nome: 'ariel',
-//     idade: 25,
-// });
+// const { nome, idade } = criarPessoa('Ariel', 29);
+
+// console.log(nome, idade);
 
 
-// ** atribuição por rest operator **
 
-// function printUser({ nome, idade, ...props }) {
-//     console.log(nome, idade, props);
-// }
+// ** Retornando uma função: **
 
-function printUser() {
-    console.log(arguments);
+function criarPessoa(nome, idade) {
+
+    function myFunc() {
+        return `${nome}  ${idade}`;
+    }
+
+    return myFunc()
 }
 
-printUser({
-    nome: 'ariel',
-    idade: 25,
-    cor: 'P',
-    sexo: 'M'
-}, 'segundo argumento');
+const myFunc = criarPessoa('Ariel', 29);
 
+console.log(myFunc);
