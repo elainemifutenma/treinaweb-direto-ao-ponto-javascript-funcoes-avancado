@@ -1,20 +1,20 @@
 
-// função construtora
 
-const data = {
-    nome: "ariel",
-    add() {
-        this.idade = 29
-        console.log(this);
-    }
+
+const myFunc = () => {
+    "use strict"
+    let nome = "Ariel";
+
+    console.log("Olá ", nome);
 }
 
-function Pessoa(nome, idade) {
-    this.nome = nome;
-    this.idade = idade;
+myFunc();
 
+
+
+function calculador(x, y) {
+    "use strict"
+    console.log(x + y);
 }
 
-const { idade, nome } = new Pessoa("ariel", 29);
-console.log(idade);
-console.log(nome);
+calculador(5, 10);
