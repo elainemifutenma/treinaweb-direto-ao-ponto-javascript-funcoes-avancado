@@ -1,17 +1,20 @@
 
-//  função geradora(ou generator function)
+// função construtora
 
-
-function* gerador() {
-    let i = 0
-    while (i < 5) {
-        yield i;
-        i++;
+const data = {
+    nome: "ariel",
+    add() {
+        this.idade = 29
+        console.log(this);
     }
 }
 
-const g = gerador();
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
 
-for (let index = 0; index < 10; index++) {
-    console.log(g.next());
 }
+
+const { idade, nome } = new Pessoa("ariel", 29);
+console.log(idade);
+console.log(nome);
