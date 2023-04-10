@@ -1,21 +1,7 @@
 
-console.log("inicio");
+function main(callback) {
+    setTimeout(callback, 2000);
 
-const data = await new Promise((resolve) => {
-    setTimeout(() => {
-        resolve("promise resolvida");
-    }, 2000);
-});
+}
 
-console.log(data);
-
-
-(async () => {
-    const data = await new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("promise resolvida");
-        }, 2000);
-    });
-
-    console.log(data);
-})();
+main(() => console.log("executou"))
