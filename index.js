@@ -1,9 +1,21 @@
 
-function multiplicador(a) {
-    return function (b) {
-        return a * b;
-    };
-}
+console.log("inicio");
+
+const data = await new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("promise resolvida");
+    }, 2000);
+});
+
+console.log(data);
 
 
-console.log(multiplicador(5)(10));
+(async () => {
+    const data = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("promise resolvida");
+        }, 2000);
+    });
+
+    console.log(data);
+})();
